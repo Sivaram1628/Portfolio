@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+ 
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyWebsite</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/5bcf8aa587.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!-- Varta -->
+    <div id="header">
+      <div class="container">
+        <nav>
+          <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fas fa-times" onclick="closemenu()"></i>
+          </ul>
+          <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="heater-text">
+          <p>Fresher</p>
+          <h1>Hi I'm <span>SivaRama Krishnan</span></h1>
+        </div>
+      </div>
+    </div>
+    <!-------------------------------------about--------------------------------------------->
+    <div id="about">
+      <div class="container">
+        <div class="about">
+          <h1 class="sub-title">About Me</h1>
+          <p>
+            Hello! I'm Sivarama Krishna, a recent graduate with a B.E in Computer Science from [St.Peter's College of Engineering and Technology].
+            in Avadi. I am excited to embark on my professional journey in the Web Development and bring fresh perspectives and innovative ideas to the field.
+          </p>
+          <div class="tab-titles">
+            <P class="tab-links active-link" onclick="opentab('skills')">Skills</P>
+            <P class="tab-links" onclick="opentab('education')">Education</P>
+          </div>
+          
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li><span>Web designing</span><br> HTML and CSS</li>
+              <li><span>web Development</span><br>JavaScript</li>
+              <li><span>Applications</span><br>java<br>Python</li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="education">
+            <ul>
+              <li><span>SSLC-68%</span><br> Sri Vignesh Vidya Mandhir, <br>Nagalapuram</li>
+              <li><span>HSC-63%</span><br> Sri Sai Jothy  Junior College, <br>Putturr</li>
+              <li><span>Bachelor of Engineering</span> <br>St.Peter's College of Engineering and Technology, <br>Avadi</li>
+            </ul>
+          </div>
+  
+        </div>
+        </div>
+      </div>
+
+      <!-----------------------------Projects--------------------------------->
+
+      <div id="projects">
+        <div class="container">
+          <h1 class="sub-title">My Projects</h1>
+          <div class="projects-list">
+            <div>
+              <i class="fa-brands fa-app-store"></i>
+              <h2>Amazon Stock Prediction</h2>
+            <p>
+              The aim is to predict machine learing based techniques for stock price prediction.
+              The analysis of dataset by supervised machine learing technique(SMLT)ufing uni variant analysis,bi variate and multi variate analysis 
+              To propose a machine learing based method to accureately predict the stock price.
+            </p>
+           
+            </div>
+            <div>
+              <i class="fa-solid fa-code"></i>
+              <h2>Gaming</h2>
+            <p>
+             Intoducing Jump The Obstacles, the game is developed in UnityGameEngine, and used language is c#.
+             This game is to mainly developed for to improve the users patients level.The aim for user is to avoid the obstacles until he hit the obstacles.
+             Maybe in future the will be updating the user experience the game will have next levels for the updated version of the game.
+            </p>
+            
+            </div>
+            
+          </div>
+        </div>
+      </div>          
+
+      <!------------------------------contact------------------------------------>
+
+      <div id="contact">
+        <div class="container">
+          <div class="row">
+            <div class="contact-left">
+              <h1 class="sub-title">Contact Me</h1>
+              <p><i class="fa-solid fa-paper-plane"></i> <a href="mailto:srkrish1101@gmail.com" class="mail">srkrish1101@gmail.com</a></p>
+              <p><i class="fa-solid fa-phone"></i><a href="tel:9345054459" class="phone">9345054459</a></p>
+              <div class="social-icons">
+                <a href="https://www.linkedin.com/in/sivarama-krishnan-a-n-b95488263/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/_.siva_.ram_.7_?igsh=MWM2d3A5OGdvemRicA=="><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.facebook.com/siva.sivaramakrishna.583?mibextid=ZbWKwL/"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://wa.me/9345054459"><i class="fa-brands fa-whatsapp"></i></a>
+              </div>
+              <a href="Siva/SivaRama Krishnan A N.pdf" download ><button class="btn1">Download CV</button></a>
+            </div>
+            <div class="contact-right">
+              <form class="sub-title2" name="submit-to-google-sheet">
+                <input type="text" name="Name" placeholder="Your Name" required>
+                <input type="email" name="Email" placeholder="Your Email" required>
+                <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                <button type="submit" class="btn2">submit</button>
+              </form>
+              <span id="msg">
+              
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>Copyrights Made by Siva<i class="fa-solid fa-heart"></i> &copy;2024</p>
+        </div>
+      </div>
+
+  <script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+
+      for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+      }
+      
+      for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+      }
+
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab");
+    }
+
+  </script>
+
+  <script>
+    
+    var sidemenu = document.getElementById("sidemenu")
+
+    function openmenu(){
+      sidemenu.style.right = "0";
+    }
+    function closemenu(){
+      sidemenu.style.right = "-200px";
+    }
+
+  </script>
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyTSliWwgEcdBwkjF3QHtWCohz5kM50jGlXJd-Mf5oLG86qj1ZSInDlcrlypm3IG_RRIw/exec'
+    const form = document.forms['submit-to-google-sheet']
+
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+          msg.innerHTML = "Message sent Successfully"
+          setTimeout(function(){
+            msg.innerHTML = ""
+          },5000)
+          form.reset()
+        })
+        
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+  
+  </body>
+</html>
